@@ -1,0 +1,36 @@
+@import './default.less';
+@import './loading.less';
+.container {
+    .nav-left {
+        background-color: #001529;
+        color: #fff;
+        height: calc(100vh);
+    }
+    .main {
+        overflow: auto;
+        height: calc(100vh);
+        background-color: @colorL;
+        .content {
+            position: relative;
+            padding: 20px;
+        }
+    }
+}
+.content-wrap {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    .ant-table-wrapper {
+        margin: 0 -1px;
+    }
+}
+ul, li {
+    list-style: none;
+}
+.clearfix{
+    &::after{
+        content:' ';
+        clear:both;
+        display: block;
+        visibility: hidden;
+    }
+}
