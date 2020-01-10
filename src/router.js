@@ -22,6 +22,12 @@ import City from './pages/city';
 import Order from './pages/order';
 import OrderDetail from './pages/order/detail';
 import Common from './common';
+import User from './pages/user';
+import BikeMap from './pages/Map/bikeMap';
+import Bar from './pages/echarts/bar';
+import Pie from './pages/echarts/pie';
+import Line from './pages/echarts/line';
+import Rich from './pages/rich';
 
 class IRouter extends Component {
     constructor(props) {
@@ -58,6 +64,12 @@ class IRouter extends Component {
                                 <Route path="/table/high" component={HighTable}></Route>
                                 <Route path="/city" component={City}></Route>
                                 <Route path="/order" component={Order}></Route>
+                                <Route path="/user" component={User}></Route>
+                                <Route path="/bikeMap" component={BikeMap}></Route>
+                                <Route path="/charts/bar" component={Bar}></Route>
+                                <Route path="/charts/pie" component={Pie}></Route>
+                                <Route path="/charts/line" component={Line}></Route>
+                                <Route path="/rich" component={Rich}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>

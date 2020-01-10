@@ -11,7 +11,7 @@ export default {
     pagination(data, callback){
         return {
             onChange: (current)=>{
-                debugger
+                
                 callback(current)
             },
             current: data.result.page,
@@ -35,6 +35,7 @@ export default {
         return options;
     },
     updateSelectedItem(selectedRowKeys, selectedItem, selectedIds){// 行key 行数据
+        
         if(selectedIds){
             this.setState({
                 selectedRowKeys,

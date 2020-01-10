@@ -68,7 +68,8 @@ export default class Axios{
                     loading.style.display = 'none';
                 }
                 if(res.status == 200){
-                    let data = res.data
+                    
+                    let data = res.data || res
                     if(data.code == '0'){
                         resolve(data)
                     }else {
