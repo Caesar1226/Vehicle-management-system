@@ -28,6 +28,7 @@ import Bar from './pages/echarts/bar';
 import Pie from './pages/echarts/pie';
 import Line from './pages/echarts/line';
 import Rich from './pages/rich';
+import Permission from './pages/permission';
 
 class IRouter extends Component {
     constructor(props) {
@@ -70,6 +71,7 @@ class IRouter extends Component {
                                 <Route path="/charts/pie" component={Pie}></Route>
                                 <Route path="/charts/line" component={Line}></Route>
                                 <Route path="/rich" component={Rich}></Route>
+                                <Route path="/permission" component={Permission}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
