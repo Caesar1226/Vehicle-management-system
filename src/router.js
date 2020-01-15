@@ -1,6 +1,6 @@
 import { Table, Carousel, message } from 'antd';
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import App from './App';
 import Login from './pages/login';
 import Home from './pages/home';
@@ -72,6 +72,7 @@ class IRouter extends Component {
                                 <Route path="/charts/line" component={Line}></Route>
                                 <Route path="/rich" component={Rich}></Route>
                                 <Route path="/permission" component={Permission}></Route>
+                                <Redirect to="/home" />
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>

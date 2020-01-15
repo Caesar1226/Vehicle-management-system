@@ -33,7 +33,7 @@ class ETable extends Component {
         }else {
             let selectedRowKeys = [index]
             let selectedItem = record
-            console.log(selectedRowKeys, selectedItem)
+            //console.log(selectedRowKeys, selectedItem)
             this.props.updateSelectedItem(selectedRowKeys, selectedItem)
         }
     }

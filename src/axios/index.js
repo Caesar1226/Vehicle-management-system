@@ -2,6 +2,8 @@ import JsonP from 'jsonp';
 import axios from 'axios';
 import { Modal } from 'antd';
 import Utils from '../utils/utils';
+import qs from 'qs';
+axios.defaults.baseURL="http://rap2api.taobao.org/app/mock/240963"
 export default class Axios{
     static reequestList(_this, url, params){
         var data = {
@@ -37,6 +39,19 @@ export default class Axios{
             })
         })
     }
+    static post(option){
+        debugger
+        return new Promise((resolve, reject)=>{
+            let a = qs.stringify(option.params)
+            axios.post(option.url,qs.stringify(option.params))
+            .then(res => {
+                resolve(res)
+            })
+            .catch(err => {
+                reject(err); 
+            })
+        })
+    }
     static get(option){
         return new Promise((resolve, reject)=>{
             axios.get(option.url,option.params)
@@ -54,12 +69,10 @@ export default class Axios{
             loading = document.getElementById('ajaxLoading');
             loading.style.display = 'block';
         }
-        let baseApi = "http://rap2api.taobao.org/app/mock/240963" 
         return new Promise((resolve, reject)=>{
             axios({
                 url: options.url,
                 method: 'get',
-                baseURL: baseApi,
                 timeout: 5000,
                 params: (options.data && options.data.params) || ''
             }).then(res=>{

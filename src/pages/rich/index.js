@@ -12,7 +12,7 @@ class Rich extends Component {
         }
     }
     onEditorStateChange = (editorState)=>{
-        console.log(editorState, 'editorState')
+        //console.log(editorState, 'editorState')
         this.setState({
             editorState,
         });
